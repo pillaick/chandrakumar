@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandrakumar Pillai | AI Advisor, Enterprise Architect & Speaker</title>
+  <meta
+    name="description"
+    content="Official website of Chandrakumar Pillai — AI Advisor, Enterprise Architect, Speaker, Author, Board Member, and creator of AI Daily Nutshell."
+  />
+  <meta
+    name="keywords"
+    content="Chandrakumar Pillai, AI Advisor, Enterprise Architect, AI Speaker, Top AI Voice, AI Daily Nutshell, Brussels, Belgium, Enterprise Architecture, AI Strategy"
+  />
+  <meta name="author" content="Chandrakumar Pillai" />
+  <meta property="og:title" content="Chandrakumar Pillai | AI Advisor, Enterprise Architect & Speaker" />
+  <meta
+    property="og:description"
+    content="Helping leaders and organisations turn AI strategy, enterprise architecture, and digital transformation into real business value."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chandrakumar.eu" />
+  <meta property="og:image" content="https://chandrakumar.eu/og-image.jpg" />
+  <link rel="canonical" href="https://chandrakumar.eu" />
+
+  <style>
+    :root {
+      --bg: #06111f;
+      --bg2: #0b1729;
+      --surface: rgba(255, 255, 255, 0.06);
+      --surface2: rgba(255, 255, 255, 0.1);
+      --text: #f5f7fb;
+      --muted: #b8c5d8;
+      --line: rgba(255, 255, 255, 0.12);
+      --primary: #4f8cff;
+      --secondary: #7a5cff;
+      --accent: #19c3b1;
+      --gold: #f0c36d;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(79, 140, 255, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 12%, rgba(122, 92, 255, 0.16), transparent 24%),
+        radial-gradient(circle at 50% 85%, rgba(25, 195, 177, 0.09), transparent 28%),
+        linear-gradient(180deg, #05101b 0%, #091321 42%, #0c182b 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 22px;
+      backdrop-filter: blur(10px);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      box-shadow: 0 0 18px rgba(25, 195, 177, 0.85);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5.4rem);
+      font-weight: 850;
+      max-width: 980px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 760;
+      margin-bottom: 10px;
+    }
+
+    p.lead {
+      font-size: clamp(1.06rem, 2vw, 1.23rem);
+      color: var(--muted);
+      max-width: 860px;
+      margin-top: 24px;
+    }
+
+    p.section-text {
+      color: var(--muted);
+      max-width: 780px;
+      font-size: 1.03rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 0%, #9bc0ff 36%, #b59dff 68%, #87f0e2 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(6, 14, 24, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+      box-shadow: 0 16px 36px rgba(79, 140, 255, 0.35);
+    }
+
+    .brand-title {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-subtitle {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 550;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 15px;
+      font-weight: 760;
+      border: 1px solid transparent;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: 0 18px 34px rgba(79, 140, 255, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 90px 0 72px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .glass,
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.05));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .profile-card {
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -60px;
+      bottom: -60px;
+      background: radial-gradient(circle, rgba(25,195,177,0.22), transparent 62%);
+      pointer-events: none;
+    }
+
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .avatar {
+      width: 82px;
+      height: 82px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: 0 16px 38px rgba(79,140,255,0.28);
+      flex-shrink: 0;
+    }
+
+    .profile-role {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.45rem;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+      list-style: none;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .trust-grid,
+    .services-grid,
+    .proof-grid,
+    .content-grid,
+    .contact-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 28px;
+    }
+
+    .trust-box {
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+      text-align: center;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .services-grid,
+    .proof-grid,
+    .content-grid {
+      margin-top: 34px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      padding: 26px;
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, rgba(79,140,255,0.2), rgba(122,92,255,0.22));
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 18px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin-top: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 34px;
+      align-items: start;
+    }
+
+    .panel {
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .panel p,
+    .panel li {
+      color: var(--muted);
+    }
+
+    .panel ul {
+      padding-left: 20px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+      color: #cad4e5;
+      font-size: 0.82rem;
+      margin-bottom: 16px;
+    }
+
+    .highlight {
+      margin-top: 36px;
+      padding: 40px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(79,140,255,0.16), rgba(122,92,255,0.12)),
+        rgba(255,255,255,0.05);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .highlight p {
+      color: var(--muted);
+      max-width: 780px;
+      margin: 16px auto 26px;
+    }
+
+    .contact-grid {
+      margin-top: 34px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .contact-item small {
+      display: block;
+      color: #8fa1bf;
+      margin-bottom: 6px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      font-weight: 650;
+      word-break: break-word;
+    }
+
+    footer {
+      padding: 30px 0 50px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 1060px) {
+      .hero-grid,
+      .services-grid,
+      .proof-grid,
+      .content-grid,
+      .contact-grid,
+      .split,
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 0;
+      }
+
+      .hero,
+      .section {
+        padding: 72px 0;
+      }
+
+      .hero-grid,
+      .services-grid,
+      .proof-grid,
+      .content-grid,
+      .contact-grid,
+      .split,
+      .trust-grid,
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .highlight {
+        padding: 28px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Homepage">
+        <div class="brand-mark">CP</div>
+        <div>
+          <div class="brand-title">Chandrakumar Pillai</div>
+          <div class="brand-subtitle">AI Advisor • Enterprise Architect • Speaker • Author</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#credibility">Credibility</a>
+        <a href="#content">Content</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.cal.eu/ckpillai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Brussels-based AI Advisor, Enterprise Architect & Technology Speaker</div>
+          <h1>
+            Helping leaders turn <span class="gradient-text">AI strategy</span>, enterprise architecture, and digital transformation into business value.
+          </h1>
+          <p class="lead">
+            I work with organisations, institutions, and technology leaders who need clear thinking,
+            credible guidance, and practical execution across AI adoption, enterprise modernisation,
+            strategic technology decisions, and thought leadership.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://www.cal.eu/ckpillai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
+            <a href="https://www.linkedin.com/in/chandrakumarpillai/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
+          </div>
+
+          <ul class="checklist">
+            <li>AI advisory for executives, enterprises, and public-sector environments</li>
+            <li>Enterprise architecture guidance for complex digital ecosystems</li>
+            <li>Speaker, author, board member, and trusted strategic thought partner</li>
+          </ul>
+        </div>
+
+        <aside class="glass profile-card">
+          <div class="profile-top">
+            <div class="avatar">CP</div>
+            <div>
+              <h3 style="margin-bottom: 4px;">Chandrakumar Pillai</h3>
+              <div class="profile-role">Top AI Voice • Board Member • Author • Enterprise Architect</div>
+            </div>
+          </div>
+
+          <p>
+            Through this platform, I bring together enterprise-grade technology expertise, practical
+            AI insights, public thought leadership, and business-focused advisory for organisations
+            navigating change.
+          </p>
+
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>117k+</strong>
+              <span>LinkedIn followers</span>
+            </div>
+            <div class="stat">
+              <strong>52k+</strong>
+              <span>AI Daily Nutshell followers</span>
+            </div>
+            <div class="stat">
+              <strong>2,500+</strong>
+              <span>LinkedIn posts published</span>
+            </div>
+            <div class="stat">
+              <strong>800+</strong>
+              <span>Articles published</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-box">AI Strategy</div>
+          <div class="trust-box">Enterprise Architecture</div>
+          <div class="trust-box">Executive Advisory</div>
+          <div class="trust-box">Thought Leadership</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="eyebrow">Services</div>
+        <h2>Strategic services for leaders, enterprises, and institutions</h2>
+        <p class="section-text">
+          I help organisations move from fragmented AI and digital initiatives to a more structured,
+          credible, and value-driven transformation path.
+        </p>
+
+        <div class="services-grid">
+          <article class="card">
+            <div class="icon">AI</div>
+            <h3>AI Advisory & Adoption Strategy</h3>
+            <p>
+              Define practical AI roadmaps, identify high-value use cases, and align innovation with governance, business goals, and real operational outcomes.
+            </p>
+            <ul>
+              <li>AI opportunity assessment</li>
+              <li>Adoption roadmap and prioritisation</li>
+              <li>Leadership advisory and workshops</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">EA</div>
+            <h3>Enterprise Architecture</h3>
+            <p>
+              Support modernisation, application strategy, platform thinking, and architecture governance for complex enterprise and institutional environments.
+            </p>
+            <ul>
+              <li>Solution and application architecture</li>
+              <li>Modernisation and migration planning</li>
+              <li>Architecture governance support</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">DX</div>
+            <h3>Digital Transformation Advisory</h3>
+            <p>
+              Help organisations navigate digital change with better alignment between business strategy, technology decisions, and delivery execution.
+            </p>
+            <ul>
+              <li>Transformation roadmap design</li>
+              <li>Stakeholder alignment</li>
+              <li>Strategic programme support</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">SP</div>
+            <h3>Speaking & Executive Briefings</h3>
+            <p>
+              Deliver high-impact talks and strategic sessions on AI, enterprise innovation, trust, governance, and future-ready leadership.
+            </p>
+            <ul>
+              <li>Conference speaking</li>
+              <li>Leadership sessions</li>
+              <li>Board and executive briefings</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">TH</div>
+            <h3>Thought Leadership Partnerships</h3>
+            <p>
+              Help brands and organisations strengthen credibility in AI and technology through strategic visibility, content, and positioning.
+            </p>
+            <ul>
+              <li>Authority-building collaborations</li>
+              <li>LinkedIn and newsletter visibility</li>
+              <li>Strategic communication support</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">IN</div>
+            <h3>Innovation & Opportunity Framing</h3>
+            <p>
+              Evaluate emerging opportunities with a practical lens on value, feasibility, trust, and long-term strategic fit.
+            </p>
+            <ul>
+              <li>Innovation prioritisation</li>
+              <li>Use-case evaluation</li>
+              <li>Value-focused experimentation guidance</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="eyebrow">About</div>
+        <h2>A personal brand backed by enterprise-grade expertise</h2>
+        <p class="section-text">
+          My work combines enterprise architecture depth, AI advisory, strategic communication, and
+          highly visible thought leadership — enabling me to support both executive decision-making
+          and broader market positioning.
+        </p>
+
+        <div class="split">
+          <div class="panel">
+            <h3>What I bring</h3>
+            <ul>
+              <li>Strong positioning in AI, technology, and business transformation</li>
+              <li>Enterprise architecture experience in complex environments</li>
+              <li>Ability to connect strategic vision with practical execution</li>
+              <li>Clear communication for executives, teams, and public audiences</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Who I work with</h3>
+            <ul>
+              <li>Organisations shaping AI strategy and responsible adoption</li>
+              <li>Enterprises modernising digital platforms and operating models</li>
+              <li>Institutions navigating complexity, governance, and transformation</li>
+              <li>Technology brands seeking credibility and expert market visibility</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credibility" class="section">
+      <div class="container">
+        <div class="eyebrow">Credibility</div>
+        <h2>Built on expertise, visibility, and trust</h2>
+        <p class="section-text">
+          My public profile reflects consistent activity across AI, leadership, enterprise technology,
+          and practical industry commentary — supported by a large LinkedIn audience and a daily AI newsletter.
+        </p>
+
+        <div class="proof-grid">
+          <article class="card">
+            <div class="tag">LinkedIn Presence</div>
+            <h3>117k+ followers and strong professional reach</h3>
+            <p>
+              A visible and engaged audience across AI, enterprise technology, leadership, innovation, and future-of-work topics.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="tag">Newsletter</div>
+            <h3>AI Daily Nutshell</h3>
+            <p>
+              A daily LinkedIn newsletter focused on AI news, opportunities, learning resources, practical insights, and critical analysis.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="tag">Authority</div>
+            <h3>Speaker, author, board member, and Top AI Voice</h3>
+            <p>
+              A profile that combines public influence with strategic advisory value for modern organisations.
+            </p>
+          </article>
+        </div>
+
+        <div class="highlight">
+          <div class="eyebrow" style="justify-content:center;">For organisations that want both expertise and influence</div>
+          <h2>Need a strategic advisor who also communicates with market-level credibility?</h2>
+          <p>
+            I help organisations not only design stronger AI and technology strategies, but also communicate innovation with confidence, clarity, and leadership presence.
+          </p>
+          <a href="https://www.cal.eu/ckpillai" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="content" class="section">
+      <div class="container">
+        <div class="eyebrow">Content & Influence</div>
+        <h2>Content, insights, and visibility that strengthen strategic positioning</h2>
+        <p class="section-text">
+          My content work is centered on AI developments, enterprise technology, practical adoption,
+          ethics, governance, and the future of work.
+        </p>
+
+        <div class="content-grid">
+          <article class="card">
+            <div class="tag">Newsletter</div>
+            <h3>AI Daily Nutshell</h3>
+            <p>
+              Daily insights on AI developments, opportunities, real-world use cases, and emerging issues shaping Europe and beyond.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="tag">Articles</div>
+            <h3>In-depth commentary and analysis</h3>
+            <p>
+              Long-form writing on AI strategy, trustworthy systems, agentic AI, enterprise adoption, privacy, governance, and digital change.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="tag">Speaking</div>
+            <h3>Public speaking and executive dialogue</h3>
+            <p>
+              Talks and discussions designed to help leadership teams make better decisions in an era of accelerating AI and technological disruption.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="eyebrow">Contact</div>
+        <h2>Let’s discuss consulting, speaking, partnerships, or advisory work</h2>
+        <p class="section-text">
+          Reach out if you are exploring AI strategy, enterprise architecture support, executive advisory,
+          thought-leadership collaboration, or speaking opportunities.
+        </p>
+
+        <div class="contact-grid">
+          <div class="glass card" style="padding: 28px;">
+            <h3>Connect</h3>
+            <div class="contact-list">
+              <div class="contact-item">
+                <small>Website</small>
+                <span>chandrakumar.eu</span>
+              </div>
+              <div class="contact-item">
+                <small>LinkedIn</small>
+                <a href="https://www.linkedin.com/in/chandrakumarpillai/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/chandrakumarpillai
+                </a>
+              </div>
+              <div class="contact-item">
+                <small>Book a call</small>
+                <a href="https://www.cal.eu/ckpillai" target="_blank" rel="noopener noreferrer">
+                  cal.eu/ckpillai
+                </a>
+              </div>
+              <div class="contact-item">
+                <small>Base</small>
+                <span>Brussels, EU</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass card" style="padding: 28px;">
+            <h3>Preferred next step</h3>
+            <p class="section-text" style="max-width:none; margin-bottom: 18px;">
+              The fastest way to connect is to use the booking link below for a direct conversation.
+            </p>
+            <a href="https://www.cal.eu/ckpillai" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-bottom: 14px;">
+              Schedule a Meeting
+            </a>
+            <a href="https://www.linkedin.com/in/chandrakumarpillai/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              Message on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Chandrakumar Pillai. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#credibility">Credibility</a>
+        <a href="#content">Content</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
